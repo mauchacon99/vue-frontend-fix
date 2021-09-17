@@ -1,8 +1,15 @@
+ 
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App'
+import router from './router'
+import './index.css'
+ 
+import Dialog from 'vue-dialog-loading'
 
-Vue.config.productionTip = false
+//global config
+Vue.use(Dialog )
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: h => h(App)
+}).$mount("#app");
